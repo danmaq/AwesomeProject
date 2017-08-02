@@ -1,9 +1,15 @@
 import React from 'react';
-import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, Image } from 'react-native';
 
 export default class HelloWorldApp extends React.Component {
   render() {
-    return (<Text>Hello, world!</Text>);
+    let pic = {
+      uri: 'https://danmaq.com/wp-content/uploads/2012/11/em.jpg'
+    };
+
+    return (
+      <Image source={pic} style={{width: 414, height: 736}}/>
+  );
   }
 }
 
