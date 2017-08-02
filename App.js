@@ -1,15 +1,23 @@
 import React from 'react';
-import { AppRegistry, Image } from 'react-native';
+import { AppRegistry, Image, Text, View } from 'react-native';
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <Text>Hello {this.props.name}!</Text>
+    );
+  }
+}
 
 export default class HelloWorldApp extends React.Component {
   render() {
-    let pic = {
-      uri: 'https://danmaq.com/wp-content/uploads/2012/11/em.jpg'
-    };
-
     return (
-      <Image source={pic} style={{width: 414, height: 736}}/>
-  );
+      <View style={{alignItems: 'center'}}>
+        <Greeting name="Enna" />
+        <Greeting name="Grace" />
+        <Greeting name="Ark" />
+      </View>
+    );
   }
 }
 
