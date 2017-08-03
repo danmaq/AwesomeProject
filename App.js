@@ -4,10 +4,15 @@ import { AppRegistry, View } from 'react-native';
 export default class HelloWorldApp extends React.Component {
   render() {
     return (
-      <View style={{flex: 1, backgroundColor: 'cornflowerblue'}}>
-        <View style={{flex: 1, backgroundColor: 'powderblue'}} />
-        <View style={{flex: 2, backgroundColor: 'skyblue'}} />
-        <View style={{flex: 3, backgroundColor: 'steelblue'}} />
+      <View style={{
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        backgroundColor: 'cornflowerblue'}}>
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
       </View>
     );
   }
