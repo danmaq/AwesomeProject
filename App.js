@@ -1,31 +1,25 @@
 import React from 'react';
-import { AppRegistry, Image, Text, View } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 
-class Greeting extends React.Component {
-  constructor(props) {
-    super(props);
-    this.text = { "showText": true };
-    setInterval(() => {
-      this.setState(p => ({ "showText": (p ? !p["showText"] : true) }));
-    }, 1500);
-  }
-  render() {
-    const state = this.state;
-    const str = state && state.showText ? this.props.name : '■■■■■■';
-    return (
-      <Text>Hello {str}!</Text>
-    );
-  }
-}
+const styles = StyleSheet.create({
+  bigblue: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+  red: {
+    color: 'red',
+  },
+});
 
 export default class HelloWorldApp extends React.Component {
   render() {
     return (
       <View style={{alignItems: 'center'}}>
-        <Greeting name="Enna Braun" />
-        <Greeting name="Grace Braun" />
-        <Greeting name="Ark Wimmer" />
-        <Greeting name="Gordon Bollmann" />
+        <Text style={styles.bigblue}>Grace Braun</Text>
+        <Text style={styles.red}>Enna Braun</Text>
+        <Text style={[styles.red, styles.bigblue]}>Ark Wimmer</Text>
+        <Text style={[styles.bigblue, styles.red]}>Gordon Bollmann</Text>
       </View>
     );
   }
