@@ -16,7 +16,6 @@ const Scenes = (
         <Scene key="card" component={Card} />
     </Scene>
 );
-console.log(Scenes);
 
 export default class HelloWorldApp extends React.Component {
     render() {

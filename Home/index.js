@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 
 import Home from './Home';
 import * as actions from './actions';
+
 import { getNav, getHome } from '../reducers';
 
 const mapStateToProps =
